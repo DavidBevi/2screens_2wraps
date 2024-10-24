@@ -10,7 +10,7 @@ This script allows me to do it.
 
 ### A. Nice-to-read code with comments:
 
-- [`2s2w.ahk`](https://github.com/DavidBevi/2screens_2wraps/blob/main/2s2w.ahk)
+[`2s2w.ahk`](https://github.com/DavidBevi/2screens_2wraps/blob/main/2s2w.ahk)
 
 ### B. Supercompact code:
 
