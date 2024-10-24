@@ -8,22 +8,29 @@ This script allows me to do it.
 
 ![Demo](https://github.com/DavidBevi/2screens_2wraps/blob/main/2s2w_demo.gif?raw=true)
 
-### A. Nice-to-read code with comments:
+### Pick your favorite:
 
-[`2s2w.ahk`](https://github.com/DavidBevi/2screens_2wraps/blob/main/2s2w.ahk)
+1. 🙂 **NICE-TO-READ / COMMENTED CODE**:
 
-### B. Supercompact code:
+    [`2s2w.ahk`](https://github.com/DavidBevi/2screens_2wraps/blob/main/2s2w.ahk)
 
-    ;▼ DOUBLE SCREEN, make cursor warp ALSO horizontally - set Screen2 OVER Screen1
-    If (SysGet(80)>1) {
-       sc1_w:=SysGet(0), sc1_h:=SysGet(1)
-       SetTimer(warp(*)=>( MouseGetPos(&mx,&my),
-                           (my>0? (mx=sc1_w-1? MouseMove(1,my-sc1_h) :{}) : 
-                                  (mx=0? MouseMove(sc1_w-2, my+sc1_h):{}) )  ),33)
-    }
+2. 📏 **COMPACT CODE**:
 
-You only need one of the two, they are identical in functionality.
+        ;▼ DOUBLE SCREEN, make cursor warp ALSO horizontally - set Screen2 OVER Screen1
+        If (SysGet(80)>1) {
+           sc1_w:=SysGet(0), sc1_h:=SysGet(1)
+           SetTimer(warp(*)=>( MouseGetPos(&mx,&my),
+                               (my>0? (mx=sc1_w-1? MouseMove(1,my-sc1_h) :{}) : 
+                                      (mx=0? MouseMove(sc1_w-2, my+sc1_h):{}) )  ),33)
+        }
 
-I prefer the *Supercompact* version because I keep all my functions in one script/file, so I use [multi-statement](https://www.autohotkey.com/docs/v2/Variables.htm#comma), [ternary](https://www.autohotkey.com/docs/v2/Variables.htm#ternary), [fat-arrow](https://www.autohotkey.com/docs/v2/Variables.htm#fat-arrow), and uncommon spacing.
+3. ☣️ **CURSED ONELINER**:
 
-### This script is free and opensource, no attribution needed
+    `w:=SysGet(0),h:=SysGet(1),SetTimer(()=>(MouseGetPos(&x,&y),(y>0?(x=w-1?MouseMove(1,y-h):{}):(x=0?MouseMove(w-2,y+h):{}))),9)`
+    - This is the shortest code I found that does the job, but it's too cryptic for me to recommend it.
+
+
+
+_____
+
+I prefer the *compact code*, because I keep all my functions in one script/file, so I use [multi-statement](https://www.autohotkey.com/docs/v2/Variables.htm#comma), [ternary](https://www.autohotkey.com/docs/v2/Variables.htm#ternary), [fat-arrow](https://www.autohotkey.com/docs/v2/Variables.htm#fat-arrow), uncommon spacing, and try to keep it understandable to future-me.
