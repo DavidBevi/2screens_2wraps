@@ -1,4 +1,7 @@
-;2SCREENS_2WRAPS by DavidBevi
+;2SCREENS_2WRAPS ALT - Set monitors horizontally
+;This should be better because it doesn't use global vars
+;However I don't want to document it RN, pick the other one
+
 #Requires AutoHotkey v2.0
 CoordMode("Mouse")
 
